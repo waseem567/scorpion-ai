@@ -1,10 +1,9 @@
 "use client"
-import main_img from "../assets/favi.png";
+import main_img from "../assets/final_main.png";
 import Image from "next/image";
-import ring from "../assets/ring.png";
-import box from "../assets/box.png";
-import Typewriter from 'typewriter-effect';
+import useThemeStore from "@/store/store";
 const Header = () => {
+  const {isDarkMode} = useThemeStore();
   return (
     <div
       data-aos="zoom-in"
@@ -13,9 +12,9 @@ const Header = () => {
       {/* 1 */}
       <div className="flex-1 flex flex-col justify-center items-end">
         <div className="mx-auto flex flex-col justify-center items-around h-full lg:w-full gap-5">
-          <h1 className="bg-white mx-auto md:m-0 w-max font-semibold text-base leading-4 tracking-[1px] sm:text-[14px] px-3 py-2 rounded-full flex justify-between items-center gap-3">
+          <h1 className={`bg-green-100 mx-auto md:m-0 w-max font-semibold text-base leading-4 tracking-[1px] sm:text-[14px] px-3 py-2 rounded-full flex justify-between items-center gap-3 text-black`}>
             WELCOME{" "}
-            <span className=" bg-white blinking-cursor inline-block border-r-0 border-b-0 border-t-0 border-4 border-purple-800 h-4 pt-1"></span>
+            <span className=" bg-white blinking-cursor inline-block border-r-0 border-b-0 border-t-0 border-4 border-green-800 h-4 pt-1"></span>
           </h1>
           <div className="text-center md:text-start md:text-7xl text-4xl leading-[45px] md:leading-[65px] font-bold">
            Transforming <span className="text-green-600">Data</span> into <span className="text-green-800">Innovation</span>

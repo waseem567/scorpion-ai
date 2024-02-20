@@ -14,9 +14,11 @@
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.3",
+    "react-icons": "^5.0.1",
     "react-youtube": "^10.1.0",
     "typeit": "^8.8.3",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.21.0",
+    "zustand": "^4.5.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
