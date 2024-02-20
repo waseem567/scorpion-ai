@@ -35,9 +35,9 @@ const Team = () => {
   return (
     <React.Fragment>
       <div id="about" className="flex h-40 items-center justify-center">
-        <h1 className="bg-green-100 mx-auto md:m-0 w-max font-semibold text-base leading-4 tracking-[1px] sm:text-[14px] px-3 py-2 rounded-full flex justify-between items-center gap-3">
+        <h1 className="bg-green-100 text-black mx-auto md:m-0 w-max font-semibold text-base leading-4 tracking-[1px] sm:text-[14px] px-3 py-2 rounded-full flex justify-between items-center gap-3">
           GET TO KNOW OUR TEAM{" "}
-          <span className=" bg-white blinking-cursor inline-block border-r-0 border-b-0 border-t-0 border-4 border-purple-800 h-4 pt-1"></span>
+          <span className=" bg-white blinking-cursor inline-block border-r-0 border-b-0 border-t-0 border-4 border-green-600 h-4 pt-1"></span>
         </h1>
       </div>
       
@@ -46,7 +46,7 @@ const Team = () => {
         {TEAM.map((team) => (
           <div
             key={team.id}
-            className="mx-auto bg-white cursor-pointer transition-all duration-500 rounded-lg min-h-[400px] max-w-[360px]"
+            className="mx-auto  cursor-pointer transition-all duration-500 rounded-lg min-h-[400px] max-w-[360px]"
           >
             <div className="w-full">
               <img className="block w-full" src={team.img} alt="photo" />

@@ -1,14 +1,14 @@
 "use client"
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-
+import useThemeStore from "@/store/store";
 const Example = () => {
   return (
     <div id="services">
       <div className="flex h-48 items-center justify-center">
-      <h1 className="bg-gray-50 mx-auto md:m-0 w-max font-semibold text-base leading-4 tracking-[1px] sm:text-[14px] px-3 py-2 rounded-full flex justify-between items-center gap-3">
+      <h1 className="bg-green-100 text-black mx-auto md:m-0 w-max font-semibold text-base leading-4 tracking-[1px] sm:text-[14px] px-3 py-2 rounded-full flex justify-between items-center gap-3">
             SERVICE{" "}
-            <span className=" bg-white blinking-cursor inline-block border-r-0 border-b-0 border-t-0 border-4 border-purple-800 h-4 pt-1"></span>
+            <span className="bg-white blinking-cursor inline-block border-r-0 border-b-0 border-t-0 border-4 border-green-600 h-4 pt-1"></span>
           </h1>
       </div>
       <HorizontalScrollCarousel />
@@ -18,6 +18,7 @@ const Example = () => {
 };
 
 const HorizontalScrollCarousel = () => {
+  const {isDarkMode} = useThemeStore();
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -26,7 +27,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-56%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-gray-50">
+    <section ref={targetRef} className={`${isDarkMode ? "bg-black" : "bg-gray-50"} relative h-[300vh] `}>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {

@@ -43,9 +43,9 @@ const Solution = () => {
     <>
       <div id="solutions" className="my-20 max-w-screen-xl mx-auto">
         <div className="flex justify-center items-center my-20">
-          <h1 className="bg-green-100 my-20 mx-auto md:m-0 w-max font-semibold text-base leading-4 tracking-[1px] sm:text-[14px] px-3 py-2 rounded-full flex justify-between items-center gap-3">
+          <h1 className="bg-green-100 text-black my-20 mx-auto md:m-0 w-max font-semibold text-base leading-4 tracking-[1px] sm:text-[14px] px-3 py-2 rounded-full flex justify-between items-center gap-3">
             SOLUTIONS WE PROVIDE
-            <span className=" bg-white blinking-cursor inline-block border-r-0 border-b-0 border-t-0 border-4 border-purple-800 h-4 pt-1"></span>
+            <span className=" bg-white blinking-cursor inline-block border-r-0 border-b-0 border-t-0 border-4 border-green-800 h-4 pt-1"></span>
           </h1>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
